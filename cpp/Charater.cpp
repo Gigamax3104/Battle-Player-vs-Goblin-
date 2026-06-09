@@ -36,9 +36,6 @@ bool Character::attack(Character& target) {
 	target.m_hp -= damage;
 
 	cout << m_name << " attacks " << target.m_name << " for " << damage << " damage!" << endl;
-	if (!target.isAlive()) {
-		cout << target.m_name << " has been defeated!" << endl;
-	}
 
 	return true;
 }
