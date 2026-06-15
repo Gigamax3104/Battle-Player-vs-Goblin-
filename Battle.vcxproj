@@ -19,13 +19,21 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cpp\Charater.cpp" />
+    <ClCompile Include="cpp\Character2.cpp" />
+    <ClCompile Include="cpp\Enemy.cpp" />
+    <ClCompile Include="cpp\InputManager.cpp" />
     <ClCompile Include="cpp\Main.cpp" />
+    <ClCompile Include="cpp\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="h\Characterr.h" />
+    <ClInclude Include="h\Character2.h" />
+    <ClInclude Include="h\CharacterBase.h" />
     <ClInclude Include="h\Enemy.h" />
+    <ClInclude Include="h\InputManager.h" />
     <ClInclude Include="h\Player.h" />
+    <ClInclude Include="h\PlayerState.h" />
+    <ClInclude Include="h\Variable.h" />
+    <ClInclude Include="h\Vector2.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
