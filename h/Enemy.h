@@ -3,11 +3,11 @@
 
 class Enemy : public Character,CharacterBase {
 private:
-	int m_item;
+	int m_item; //アイテム
 
 public:
 	Enemy() : Character(50, 10, 0, 0, 10, "Goblin",Vector2(0,0)),m_item(1) {}
-	Enemy(const Enemy& other,int itemNumber = 1) : Character(other),m_item(itemNumber) {}
+	Enemy(const Enemy& other) : Character(other),m_item(other.m_item) {}
 
 	int Attack() override;
 
