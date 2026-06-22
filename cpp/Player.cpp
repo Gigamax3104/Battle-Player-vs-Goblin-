@@ -168,6 +168,7 @@ void Player::ParamaterShow(InputManager* input) {
 	cout << m_name << endl;
 }
 
+//↓以前までのコード
 //const int stateDisplay_Division = PlayerState::STATE::GUARD + 1;
 //
 //const int stateDisplay_Array_Length = sizeof stateDisplay / sizeof * stateDisplay + 1;

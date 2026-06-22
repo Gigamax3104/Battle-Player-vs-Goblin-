@@ -75,6 +75,7 @@ void GameManager::Update(int playerNumber, int enemyNumber) {
 	m_character[ENEMY] = new Enemy[m_number[ENEMY]];
 }
 
+//↓以前までのコード
 //bool GameManager::Battle() {
 //	static int a(0);
 //

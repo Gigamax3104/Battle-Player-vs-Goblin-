@@ -1,6 +1,4 @@
 #pragma once
-//#include	"Character.h"
-//#include	"TextWindow.h"
 
 #include	"Variable.h"
 #include	"Enemy.h"
@@ -33,6 +31,11 @@ private:
 	};
 };
 
+//↓以前までのコード
+// インクルード
+//#include	"Character.h"
+//#include	"TextWindow.h"
+// 
 //デファインド
 //#define HORIZONTAL_TEXT '-'
 //#define VIRTUAL_TEXT '|'
