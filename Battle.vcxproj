@@ -25,7 +25,6 @@
     <ClCompile Include="cpp\InputManager.cpp" />
     <ClCompile Include="cpp\Main.cpp" />
     <ClCompile Include="cpp\Player.cpp" />
-    <ClCompile Include="cpp\PlayerState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="h\Character2.h" />
@@ -33,7 +32,6 @@
     <ClInclude Include="h\GameManager.h" />
     <ClInclude Include="h\InputManager.h" />
     <ClInclude Include="h\Player.h" />
-    <ClInclude Include="h\PlayerState.h" />
     <ClInclude Include="h\Variable.h" />
     <ClInclude Include="h\Vector2.h" />
   </ItemGroup>
