@@ -1,7 +1,6 @@
 #pragma once
 
 #include	"Vector2.h"
-#include	"CharacterBase.h"
 #include	"InputManager.h"
 
 #include	<cstring>
