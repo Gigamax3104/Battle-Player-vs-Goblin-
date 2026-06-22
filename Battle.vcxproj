@@ -21,14 +21,16 @@
   <ItemGroup>
     <ClCompile Include="cpp\Character2.cpp" />
     <ClCompile Include="cpp\Enemy.cpp" />
+    <ClCompile Include="cpp\GameManager.cpp" />
     <ClCompile Include="cpp\InputManager.cpp" />
     <ClCompile Include="cpp\Main.cpp" />
     <ClCompile Include="cpp\Player.cpp" />
+    <ClCompile Include="cpp\PlayerState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="h\Character2.h" />
-    <ClInclude Include="h\CharacterBase.h" />
     <ClInclude Include="h\Enemy.h" />
+    <ClInclude Include="h\GameManager.h" />
     <ClInclude Include="h\InputManager.h" />
     <ClInclude Include="h\Player.h" />
     <ClInclude Include="h\PlayerState.h" />

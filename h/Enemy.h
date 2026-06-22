@@ -1,27 +1,13 @@
 #pragma once
 #include	"Character2.h"
 
-class Enemy : public Character,CharacterBase {
+class Enemy : public Character {
 private:
-	int m_item; //アイテム
+	void Item(InputManager* = nullptr) override;
 
 public:
-	Enemy() : Character(50, 10, 0, 0, 10, "Goblin",Vector2(0,0)),m_item(1) {}
-	Enemy(const Enemy& other) : Character(other),m_item(other.m_item) {}
-
-	int Attack() override;
-
-	double Action() override;
-
-	void Item() override;
-
-	void Guard() override;
-
-	bool Dodge() override;
-
-	void Damage(int damage) override;
-
-	bool IsArive() const override;
+	Enemy() : Character(50, 10.0, 0.0, 0, 10, 1, "Goblin",Vector2(0,0)) {}
+	Enemy(const Enemy& other) : Character(other) {}
 
 	void ParamaterShow(InputManager* input) override;
 };

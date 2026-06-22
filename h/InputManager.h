@@ -15,6 +15,7 @@ public:
 	const Vector2 GetCursorPosition() const { return m_cursor; }
 	const COORD GetCursorPosition_Console() const;
 
+	void ClearStringLate() const { std::cout << "\x1b[0K"; }
 private:
 	void SetCursor(); //カーソルの位置をコンソールに設定
 
