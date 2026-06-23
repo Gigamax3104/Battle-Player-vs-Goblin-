@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include	"Variable.h"
 #include	"Enemy.h"

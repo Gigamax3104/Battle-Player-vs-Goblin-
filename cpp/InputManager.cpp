@@ -1,4 +1,4 @@
-#include	"../h/InputManager.h"
+﻿#include	"../h/InputManager.h"
 
 void InputManager::SetCursor() {
     // コンソールの標準出力ハンドルを取得

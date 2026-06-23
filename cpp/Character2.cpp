@@ -1,4 +1,4 @@
-#include	"../h/Character2.h"
+﻿#include	"../h/Character2.h"
 
 #include	<ctime>
 #include	<cstdlib>

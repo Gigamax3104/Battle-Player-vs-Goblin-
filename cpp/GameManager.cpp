@@ -1,4 +1,4 @@
-#include	"../h/GameManager.h"
+﻿#include	"../h/GameManager.h"
 #include	<conio.h>
 #include	<Windows.h>
 
