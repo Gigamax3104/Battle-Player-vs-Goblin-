@@ -25,11 +25,11 @@ void Set(InputManager* input) { //•¶šo—Í
 	for (int i = stateDisplayIndex * 4; i < (stateDisplayIndex + 1) * 4; i++) {
 		cout << stateDisplay[i];
 
-		if (i % 4 == 0) input->SetCursorPosition(Vector2(input->GetCursorPosition().x + arrowLength, 2 * (i % 4 + 1)));
+		if (i % 4 == 0) input->SetCursorPosition(Vector2(input->GetCursorPosition().x + (int)arrowLength, 2 * (i % 4 + 1)));
 		else input->SetCursorPosition(Vector2(input->GetCursorPosition().x, 2 * (i % 4 + 1)));
 	}
 
-	input->SetCursorPosition(Vector2(input->GetCursorPosition().x - arrowLength, 0));
+	input->SetCursorPosition(Vector2(input->GetCursorPosition().x - (int)arrowLength, 0));
 }
 
 void Clear(InputManager* input) { //•¶šíœ
@@ -71,7 +71,7 @@ Player::Player(const Player& other, int herbNumber, int potionNumber, int marble
 	m_item[SACREDTREE_FRUIT] = sacredTree_fruitNumber;
 }
 
-void Player::Choice(Character* ch, InputManager* input) {
+void Player::ChoiceBase(Character* ch, InputManager* input) {
 	int choice(ATTACK);
 
 	input->SetCursorPosition(Vector2(25, 0));
@@ -83,7 +83,7 @@ void Player::Choice(Character* ch, InputManager* input) {
 	stateDisplayIndex = choice + 1;
 
 	if (choice == ATTACK) {
-		if (!ch->Dodge()) ch->Damage(Attack(input));
+		if (!ch->Dodge()) ch->Damage((int)Attack(input));
 	}
 	else if (choice == ACTION) {
 		double a(Action(input));
@@ -112,7 +112,7 @@ double Player::Attack(InputManager* input) {
 		int criticalChance(rand() % Probability);
 
 		if (criticalChance <= m_criticalHitProbability) return m_power * 2;
-		else m_power;
+		else return m_power;
 	}
 	else if (choice == FIRE) {
 		if (m_mp <= 0) return 0;
@@ -126,6 +126,8 @@ double Player::Attack(InputManager* input) {
 		if (m_mp <= 0) return 0;
 		else { m_mp -= 8; return rand() % 11 + 20; }
 	}
+
+	return -1.0;
 }
 
 double Player::Action(InputManager* input) {
@@ -155,7 +157,7 @@ void Player::Item(InputManager* input) {
 	if (choice == HERB) if (m_item[HERB] == 0) return; else { m_hp += 10; m_mp += 10; }
 	else if (choice == POTION) if (m_item[POTION] == 0) return; else { m_mp += 20; }
 	else if (choice == MARBLE_MEAT) if (m_item[MARBLE_MEAT] == 0) return; else { m_hp += 30; m_power += 10; }
-	else if (m_item[SACREDTREE_FRUIT] == 0) return; else{ m_hp += 15; m_power += 30; m_dodgeProbability += 20; }
+	else { if (m_item[SACREDTREE_FRUIT] == 0) return; else { m_hp += 15; m_power += 30; m_dodgeProbability += 20; } }
 }
 
 void Player::ParamaterShow(InputManager* input) {

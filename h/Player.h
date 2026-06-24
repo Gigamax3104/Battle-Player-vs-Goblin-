@@ -7,7 +7,7 @@ private:
 
 	int m_criticalHitProbability;
 
-	void Choice(Character*,InputManager*) override;
+	void ChoiceBase(Character*,InputManager*) override;
 
 	double Attack(InputManager*) override;
 
